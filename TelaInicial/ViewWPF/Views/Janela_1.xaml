@@ -22,16 +22,13 @@
             </Button.Effect>
         </Button>
         <Image HorizontalAlignment="Left" Height="57" Margin="6,9,0,0" VerticalAlignment="Top" Width="96" Source="D:\Universidade Positivo - ADS\McChinaRestaurant\McChinaRestaurant\Imagens\Hamburguer1.jpg"/>
-        <Image HorizontalAlignment="Left" Height="55" Margin="6,77,0,0" VerticalAlignment="Top" Width="96" Source="D:\Universidade Positivo - ADS\McChinaRestaurant\McChinaRestaurant\Imagens\Batatafrita.jpg"/>
-        <CheckBox Content="HamburguerChina" HorizontalAlignment="Left" Height="18" Margin="109,30,0,0" VerticalAlignment="Top" Width="134" FontFamily="Arial" FontWeight="Bold"/>
-        <CheckBox Content="BatataChina" HorizontalAlignment="Left" Height="18" Margin="109,97,0,0" VerticalAlignment="Top" Width="134" FontFamily="Arial" FontWeight="Bold"/>
-        <Image HorizontalAlignment="Left" Height="61" Margin="8,143,0,0" VerticalAlignment="Top" Width="40" Source="D:\Universidade Positivo - ADS\McChinaRestaurant\McChinaRestaurant\Imagens\coca.jpg"/>
-        <CheckBox Content="CocaChina" HorizontalAlignment="Left" Height="18" Margin="109,167,0,0" VerticalAlignment="Top" Width="134" FontFamily="Arial" FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Left" Height="51" Margin="798,11,0,0" TextWrapping="Wrap" Text="Total" VerticalAlignment="Top" Width="182" Background="White" Opacity="0.8">
+        <Image HorizontalAlignment="Left" Height="55" Margin="118,10,0,0" VerticalAlignment="Top" Width="96" Source="D:\Universidade Positivo - ADS\McChinaRestaurant\McChinaRestaurant\Imagens\Batatafrita.jpg"/>
+        <Image HorizontalAlignment="Left" Height="61" Margin="231,10,0,0" VerticalAlignment="Top" Width="40" Source="D:\Universidade Positivo - ADS\McChinaRestaurant\McChinaRestaurant\Imagens\coca.jpg"/>
+               <TextBox HorizontalAlignment="Left" Height="51" Margin="798,11,0,0" TextWrapping="Wrap" Text="Total" VerticalAlignment="Top" Width="182" Background="White" Opacity="0.8">
             <TextBox.Effect>
                 <DropShadowEffect Color="Black"/>
             </TextBox.Effect>
         </TextBox>
-
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="8,73,0,0" TextWrapping="Wrap" Text="McChinaBurguer" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>

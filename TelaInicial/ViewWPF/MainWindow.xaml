@@ -5,8 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ViewWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="500" Width="1000">
+    <Border Padding="15">
+
+        <StackPanel>
+       
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Margin="0 0 150 0" Grid.Column="0" Content="Finalizar Pedido" FontWeight="Bold"/>
+                <Button Margin="25 0 25 0" Grid.Column="1" Content="Limpar" FontWeight="Bold"/>
+                <Button Margin="150 0 0 0" Grid.Column="2" Content="Sair" FontWeight="Bold"/>
+     
+            </Grid>
+            <TextBlock Text="Dados do pedido:" FontWeight="Bold" Margin="0 10" Grid.Column="0"/>
+
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="Nome do Cliente"/>
+                    <TextBox Margin="0 0 10 0" Padding="2"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <TextBlock Text="Data do Pedido"/>
+                    <TextBox Padding="2"/>
+                </StackPanel>
+                <StackPanel Grid.Column="2">
+                    <TextBlock Margin="10 0 0 0" Text="Tipo de Pedido"/>
+                    <ComboBox Margin="10 0 0 0" Padding="3"/>
+                </StackPanel>
+            </Grid>
+            
+        </StackPanel>
+    </Border>
 </Window>
