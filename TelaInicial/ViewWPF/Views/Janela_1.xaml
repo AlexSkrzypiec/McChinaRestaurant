@@ -4,31 +4,128 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ViewWPF.Views"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
         mc:Ignorable="d"
         Title="Janela_1" Height="450" Width="1000">
-    <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="D:\Universidade Positivo - ADS\McChinaRestaurant\McChinaRestaurant\Imagens\McChina.jpg"/>
-        </Grid.Background>
+    <Border Padding="0">
+        <StackPanel>
+            <StackPanel.Background>
+                <ImageBrush ImageSource="/ViewWPF;component/Imagens/McChina.jpg" Stretch="UniformToFill"/>
+            </StackPanel.Background>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="234*"/>
+                    <ColumnDefinition Width="17*"/>
+                    <ColumnDefinition Width="80*"/>
+                    <ColumnDefinition Width="332*"/>
+                    <ColumnDefinition Width="331*"/>
+                </Grid.ColumnDefinitions>
 
-        <Button Content="Finalizar Pedido" HorizontalAlignment="Left" Height="38" Margin="880,302,0,0" VerticalAlignment="Top" Width="99" FontWeight="Bold" Opacity="0.8">
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
-        </Button>
-        <Button Content="Sair" HorizontalAlignment="Left" Height="38" Margin="881,361,0,0" VerticalAlignment="Top" Width="99" FontWeight="Bold" FontFamily="Arial" Opacity="0.8">
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
-        </Button>
-        <Image HorizontalAlignment="Left" Height="57" Margin="6,9,0,0" VerticalAlignment="Top" Width="96" Source="D:\Universidade Positivo - ADS\McChinaRestaurant\McChinaRestaurant\Imagens\Hamburguer1.jpg"/>
-        <Image HorizontalAlignment="Left" Height="55" Margin="118,10,0,0" VerticalAlignment="Top" Width="96" Source="D:\Universidade Positivo - ADS\McChinaRestaurant\McChinaRestaurant\Imagens\Batatafrita.jpg"/>
-        <Image HorizontalAlignment="Left" Height="61" Margin="231,10,0,0" VerticalAlignment="Top" Width="40" Source="D:\Universidade Positivo - ADS\McChinaRestaurant\McChinaRestaurant\Imagens\coca.jpg"/>
-               <TextBox HorizontalAlignment="Left" Height="51" Margin="798,11,0,0" TextWrapping="Wrap" Text="Total" VerticalAlignment="Top" Width="182" Background="White" Opacity="0.8">
-            <TextBox.Effect>
-                <DropShadowEffect Color="Black"/>
-            </TextBox.Effect>
-        </TextBox>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="8,73,0,0" TextWrapping="Wrap" Text="McChinaBurguer" VerticalAlignment="Top" Width="120"/>
-    </Grid>
+                <Button x:Name="FinishButton" Margin="10,10,0.4,-0.2" Grid.Column="0" Content="Finalizar Pedido" FontWeight="Bold" Grid.ColumnSpan="2"/>
+                <Button x:Name="ResetButton" Click="ResetButton_Click" Margin="28.6,10,65.4,-0.2" Grid.Column="3" Content="Limpar" FontWeight="Bold"/>
+                <Button x:Name="SairButton" Margin="60.6,10,9.6,-0.2" Grid.Column="4" Content="Sair" FontWeight="Bold"/>
+
+            </Grid>
+            <TextBlock Text="Dados do pedido:" FontWeight="Bold" Margin="0 10" Grid.Column="0"/>
+
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="Nome do Cliente"/>
+                    <TextBox x:Name="NomeCampo" Margin="0 0 10 0" Padding="2"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <TextBlock Text="Data do Pedido"/>
+                    <TextBox x:Name="DataCampo" Padding="2"/>
+                </StackPanel>
+                <StackPanel Grid.Column="2">
+                    <TextBlock Margin="10 0 0 0" Text="Tipo de Pedido"/>
+                    <ComboBox Margin="10 0 0 0" Padding="3">
+                        <ListBoxItem Content="Viagem"/>
+                        <ListBoxItem Content="Balcão"/>
+                    </ComboBox>
+                </StackPanel>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Margin="0 10 0 0">
+                    <TextBlock Margin="0 0 0 10" Text="McChinaHamburguers"/>
+                    <CheckBox x:Name="Ham1" Content="McChinaSimple"/>
+                    <CheckBox x:Name="Ham2" Content="McChinaDouble"/>
+                    <CheckBox x:Name="Ham3" Content="McChinaDogMeat"/>
+                    <CheckBox x:Name="Ham4" Content="McChinaCatMeat"/>
+                    <CheckBox x:Name="Ham5" Content="McChinaWeirdMeat"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Margin="0 10 0 0">
+                    <TextBlock Margin="0 0 0 10" Text="McChinaFries"/>
+                    <CheckBox x:Name="Frie1" Content="McChinaFries"/>
+                    <CheckBox x:Name="Frie2" Content="McChinaFriesMega"/>
+                    <CheckBox x:Name="Frie3" Content="McChinaFiresWithBugs"/>
+                    <CheckBox x:Name="Frie4" Content="McChinaFriesWithMoreBugs"/>
+                    <CheckBox x:Name="Frie5" Content="McChinaJustOneFrie"/>
+                </StackPanel>
+                <StackPanel Grid.Column="2" Margin="0 10 0 0">
+                    <TextBlock Margin="0 0 0 10" Text="McChinaDrinks"/>
+                    <CheckBox x:Name="Drin1" Content="McChinaCoke"/>
+                    <CheckBox x:Name="Drin2" Content="McChinaCokeWithCoke"/>
+                    <CheckBox x:Name="Drin3" Content="McChinaVodka"/>
+                    <CheckBox x:Name="Drin4" Content="McChinaFakeVodka"/>
+                    <CheckBox x:Name="Drin5" Content="McChinaPickleJuice"/>
+                </StackPanel>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Margin="0 10 0 0">
+                    <TextBlock Margin="0 0 0 10" Text="McChinaDesserts"/>
+                    <CheckBox x:Name="deser1" Content="McChinaMousseDoWelitão"/>
+                    <CheckBox x:Name="deser2" Content="McChinaMilkGoatIcecream"/>
+                    <CheckBox x:Name="deser3" Content="McChinaDeepFriedCandyBars"/>
+                    <CheckBox x:Name="deser4" Content="McChinaChocolateCricketsCovered"/>
+                    <CheckBox x:Name="deser5" Content="McChinaWasabiIcecream"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Margin="0 10 0 0">
+                    <TextBlock Margin="0 0 0 10" Text="McChinaDesserts"/>
+                    <CheckBox x:Name="food1" Content="McChinaWeirdFood"/>
+                    <CheckBox x:Name="food2" Content="McChinaWeirdFoodMega"/>
+                    <CheckBox x:Name="food3" Content="McChinaDeepWeirdFood"/>
+                    <CheckBox x:Name="food4" Content="McChinaMostWeirdFood"/>
+                    <CheckBox x:Name="food5" Content="BigMac"/>
+                </StackPanel>
+                <StackPanel Grid.Column="2" Margin="0 10 10 0">
+                    <TextBlock Margin="0 0 0 10" Text="Subtotal" FontWeight="Bold"/>
+                    <TextBox Padding="10" TextAlignment="Center" FontSize="50"/>
+                </StackPanel>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Margin="0 10 0 0">
+                    <Image gif:ImageBehavior.AnimatedSource="D:\Universidade Positivo - ADS\McChinaRestaurant\McChinaRestaurant\Imagens\tenor.gif" Width="200" Height="100" HorizontalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Margin="0 10 0 0">
+                    <Image gif:ImageBehavior.AnimatedSource="D:\Universidade Positivo - ADS\McChinaRestaurant\McChinaRestaurant\Imagens\tenor.gif" Width="200" Height="100" HorizontalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Grid.Column="2" Margin="0 10 0 0">
+                    <Image gif:ImageBehavior.AnimatedSource="D:\Universidade Positivo - ADS\McChinaRestaurant\McChinaRestaurant\Imagens\tenor.gif" Width="200" Height="100" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Border>
 </Window>
+
