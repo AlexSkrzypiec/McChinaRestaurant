@@ -14,19 +14,17 @@
             </StackPanel.Background>
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="234*"/>
-                    <ColumnDefinition Width="17*"/>
-                    <ColumnDefinition Width="80*"/>
-                    <ColumnDefinition Width="332*"/>
-                    <ColumnDefinition Width="331*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button x:Name="FinishButton" Margin="10,10,0.4,-0.2" Grid.Column="0" Content="Finalizar Pedido" FontWeight="Bold" Grid.ColumnSpan="2"/>
-                <Button x:Name="ResetButton" Click="ResetButton_Click" Margin="28.6,10,65.4,-0.2" Grid.Column="3" Content="Limpar" FontWeight="Bold"/>
-                <Button x:Name="SairButton" Margin="60.6,10,9.6,-0.2" Grid.Column="4" Content="Sair" FontWeight="Bold"/>
+                <Button x:Name="FinishButton" Margin="10 10 10 10" Grid.Column="0" Content="Finalizar Pedido" FontWeight="Bold"/>
+                <Button x:Name="ResetButton" Click="ResetButton_Click" Margin="10 10 10 10" Grid.Column="1" Content="Limpar" FontWeight="Bold"/>
+                <Button x:Name="SairButton" Margin="10 10 10 10" Grid.Column="2" Content="Sair" FontWeight="Bold" Grid.ColumnSpan="2" Click="SairButton_Click"/>
 
             </Grid>
-            <TextBlock Text="Dados do pedido:" FontWeight="Bold" Margin="0 10" Grid.Column="0"/>
+            <TextBlock Text="Dados do pedido:" FontWeight="Bold" Margin="0 10" Grid.Column="0" Foreground="White"/>
 
             <Grid>
 
@@ -36,15 +34,15 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="0">
-                    <TextBlock Text="Nome do Cliente"/>
+                    <TextBlock Text="Nome do Cliente" Foreground="White"/>
                     <TextBox x:Name="NomeCampo" Margin="0 0 10 0" Padding="2"/>
                 </StackPanel>
                 <StackPanel Grid.Column="1">
-                    <TextBlock Text="Data do Pedido"/>
+                    <TextBlock Text="Data do Pedido" Foreground="White"/>
                     <TextBox x:Name="DataCampo" Padding="2"/>
                 </StackPanel>
                 <StackPanel Grid.Column="2">
-                    <TextBlock Margin="10 0 0 0" Text="Tipo de Pedido"/>
+                    <TextBlock Margin="10 0 0 0" Text="Tipo de Pedido" Foreground="White"/>
                     <ComboBox Margin="10 0 0 0" Padding="3">
                         <ListBoxItem Content="Viagem"/>
                         <ListBoxItem Content="Balcão"/>
@@ -58,28 +56,28 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="0" Margin="0 10 0 0">
-                    <TextBlock Margin="0 0 0 10" Text="McChinaHamburguers"/>
-                    <CheckBox x:Name="Ham1" Content="McChinaSimple"/>
-                    <CheckBox x:Name="Ham2" Content="McChinaDouble"/>
-                    <CheckBox x:Name="Ham3" Content="McChinaDogMeat"/>
-                    <CheckBox x:Name="Ham4" Content="McChinaCatMeat"/>
-                    <CheckBox x:Name="Ham5" Content="McChinaWeirdMeat"/>
+                    <TextBlock Margin="0 0 0 10" Text="Mc China Hamburguers" Foreground="White"/>
+                    <CheckBox x:Name="Ham1" Content="McChina Simple" Foreground="White"/>
+                    <CheckBox x:Name="Ham2" Content="McChina Double" Foreground="White"/>
+                    <CheckBox x:Name="Ham3" Content="McChina Dog Meat" Foreground="White"/>
+                    <CheckBox x:Name="Ham4" Content="McChina Cat Meat" Foreground="White"/>
+                    <CheckBox x:Name="Ham5" Content="McChina Weird Meat" Foreground="White"/>
                 </StackPanel>
                 <StackPanel Grid.Column="1" Margin="0 10 0 0">
-                    <TextBlock Margin="0 0 0 10" Text="McChinaFries"/>
-                    <CheckBox x:Name="Frie1" Content="McChinaFries"/>
-                    <CheckBox x:Name="Frie2" Content="McChinaFriesMega"/>
-                    <CheckBox x:Name="Frie3" Content="McChinaFiresWithBugs"/>
-                    <CheckBox x:Name="Frie4" Content="McChinaFriesWithMoreBugs"/>
-                    <CheckBox x:Name="Frie5" Content="McChinaJustOneFrie"/>
+                    <TextBlock Margin="0 0 0 10" Text="McChina Fries" Foreground="White"/>
+                    <CheckBox x:Name="Frie1" Content="McChina Fries" Foreground="White"/>
+                    <CheckBox x:Name="Frie2" Content="McChina Fries Mega" Foreground="White"/>
+                    <CheckBox x:Name="Frie3" Content="McChina Fires With Bugs" Foreground="White"/>
+                    <CheckBox x:Name="Frie4" Content="McChina Fries With More Bugs" Foreground="White"/>
+                    <CheckBox x:Name="Frie5" Content="McChina Just One Frie" Foreground="White"/>
                 </StackPanel>
                 <StackPanel Grid.Column="2" Margin="0 10 0 0">
-                    <TextBlock Margin="0 0 0 10" Text="McChinaDrinks"/>
-                    <CheckBox x:Name="Drin1" Content="McChinaCoke"/>
-                    <CheckBox x:Name="Drin2" Content="McChinaCokeWithCoke"/>
-                    <CheckBox x:Name="Drin3" Content="McChinaVodka"/>
-                    <CheckBox x:Name="Drin4" Content="McChinaFakeVodka"/>
-                    <CheckBox x:Name="Drin5" Content="McChinaPickleJuice"/>
+                    <TextBlock Margin="0 0 0 10" Text="McChina Drinks" Foreground="White"/>
+                    <CheckBox x:Name="Drin1" Content="McChina Coke" Foreground="White"/>
+                    <CheckBox x:Name="Drin2" Content="McChina Coke With Coke" Foreground="White"/>
+                    <CheckBox x:Name="Drin3" Content="McChina Vodka" Foreground="White"/>
+                    <CheckBox x:Name="Drin4" Content="McChina Fake Vodka" Foreground="White"/>
+                    <CheckBox x:Name="Drin5" Content="McChina Pickle Juice" Foreground="White"/>
                 </StackPanel>
             </Grid>
             <Grid>
@@ -89,23 +87,23 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="0" Margin="0 10 0 0">
-                    <TextBlock Margin="0 0 0 10" Text="McChinaDesserts"/>
-                    <CheckBox x:Name="deser1" Content="McChinaMousseDoWelitão"/>
-                    <CheckBox x:Name="deser2" Content="McChinaMilkGoatIcecream"/>
-                    <CheckBox x:Name="deser3" Content="McChinaDeepFriedCandyBars"/>
-                    <CheckBox x:Name="deser4" Content="McChinaChocolateCricketsCovered"/>
-                    <CheckBox x:Name="deser5" Content="McChinaWasabiIcecream"/>
+                    <TextBlock Margin="0 0 0 10" Text="McChina Desserts" Foreground="White"/>
+                    <CheckBox x:Name="deser1" Content="McChina Mousse Do Welitão" Foreground="White"/>
+                    <CheckBox x:Name="deser2" Content="McChina Milk Goat Ice cream" Foreground="White"/>
+                    <CheckBox x:Name="deser3" Content="McChina Deep Fried Candy Bars" Foreground="White"/>
+                    <CheckBox x:Name="deser4" Content="McChina Chocolate Crickets Covered" Foreground="White"/>
+                    <CheckBox x:Name="deser5" Content="McChina Wasabi Icecream" Foreground="White"/>
                 </StackPanel>
                 <StackPanel Grid.Column="1" Margin="0 10 0 0">
-                    <TextBlock Margin="0 0 0 10" Text="McChinaDesserts"/>
-                    <CheckBox x:Name="food1" Content="McChinaWeirdFood"/>
-                    <CheckBox x:Name="food2" Content="McChinaWeirdFoodMega"/>
-                    <CheckBox x:Name="food3" Content="McChinaDeepWeirdFood"/>
-                    <CheckBox x:Name="food4" Content="McChinaMostWeirdFood"/>
-                    <CheckBox x:Name="food5" Content="BigMac"/>
+                    <TextBlock Margin="0 0 0 10" Text="McChina Plus" Foreground="White"/>
+                    <CheckBox x:Name="food1" Content="McChina Weird Food" Foreground="White"/>
+                    <CheckBox x:Name="food2" Content="McChina Weird Food Mega" Foreground="White"/>
+                    <CheckBox x:Name="food3" Content="McChina Deep Weird Food" Foreground="White"/>
+                    <CheckBox x:Name="food4" Content="McChina Most Weird Food" Foreground="White"/>
+                    <CheckBox x:Name="food5" Content="BigMac" Foreground="White"/>
                 </StackPanel>
                 <StackPanel Grid.Column="2" Margin="0 10 10 0">
-                    <TextBlock Margin="0 0 0 10" Text="Subtotal" FontWeight="Bold"/>
+                    <TextBlock Margin="0 0 0 10" Text="Subtotal" FontWeight="Bold" Foreground="White"/>
                     <TextBox Padding="10" TextAlignment="Center" FontSize="50"/>
                 </StackPanel>
             </Grid>
@@ -116,7 +114,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="0" Margin="0 10 0 0">
-                    <Image gif:ImageBehavior.AnimatedSource="D:\Universidade Positivo - ADS\McChinaRestaurant\McChinaRestaurant\Imagens\tenor.gif" Width="200" Height="100" HorizontalAlignment="Center"/>
+                    <Image gif:ImageBehavior.AnimatedSource="D:\Universidade Positivo - ADS\McChinaRestaurant\McChinaRestaurant\Imagens\tenor.gif" Width="200" Height="100" HorizontalAlignment="Center" Margin="64,0,67.2,0"/>
                 </StackPanel>
                 <StackPanel Grid.Column="1" Margin="0 10 0 0">
                     <Image gif:ImageBehavior.AnimatedSource="D:\Universidade Positivo - ADS\McChinaRestaurant\McChinaRestaurant\Imagens\tenor.gif" Width="200" Height="100" HorizontalAlignment="Center"/>
