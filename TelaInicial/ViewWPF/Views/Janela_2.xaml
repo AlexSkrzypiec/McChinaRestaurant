@@ -49,7 +49,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <StackPanel Grid.Column="1" Grid.Row="0">
-                <Button x:Name="entrar" Margin="50 10 50 10" Grid.Column="0" Content="Realizar login" FontWeight="Bold"/>
+                <Button x:Name="entrar" Margin="50 10 50 10" Grid.Column="0" Content="Login" FontWeight="Bold"/>
                 <Button x:Name="cancela" Margin="50 0 50 10" Grid.Column="0" Content="Canelar" FontWeight="Bold"/>
             </StackPanel>
         </Grid>

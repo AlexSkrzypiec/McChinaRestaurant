@@ -34,8 +34,8 @@ namespace ViewWPF.Views
 
             NomeCampo.Clear();
             DataCampo.Clear();
-
-
+            TipoPedido.SelectedIndex = -1;
+            
         }
 
         private void SairButton_Click(object sender, RoutedEventArgs e)
