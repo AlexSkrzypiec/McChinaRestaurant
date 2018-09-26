@@ -7,10 +7,25 @@
     <ProjectGuid>{DD21C152-8F4E-4723-8D8A-CCACCF525948}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ClassLibrary1</RootNamespace>
-    <AssemblyName>ClassLibrary1</AssemblyName>
+    <RootNamespace>Modelos</RootNamespace>
+    <AssemblyName>Modelos</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -49,59 +64,81 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="McChinaBD.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>McChinaBD.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="McChinaBD.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>McChinaBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="McChinaBD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>McChinaBD.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Pedidos.cs">
-      <DependentUpon>PedidosMcChinaDB.tt</DependentUpon>
+      <DependentUpon>McChinaBD.tt</DependentUpon>
     </Compile>
-    <Compile Include="PedidosMcChinaDB.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PedidosMcChinaDB.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="PedidosMcChinaDB.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PedidosMcChinaDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="PedidosMcChinaDB.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PedidosMcChinaDB.edmx</DependentUpon>
-    </Compile>
+    <Compile Include="PedidosModelo.cs" />
     <Compile Include="Produtos.cs">
-      <DependentUpon>PedidosMcChinaDB.tt</DependentUpon>
+      <DependentUpon>McChinaBD.tt</DependentUpon>
     </Compile>
+    <Compile Include="ProdutosModelo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Usuarios.cs">
-      <DependentUpon>PedidosMcChinaDB.tt</DependentUpon>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>McChinaBD.tt</DependentUpon>
     </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>McChinaBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>McChinaBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios.cs">
+      <DependentUpon>McChinaBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UsuariosModelo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
-    <EntityDeploy Include="PedidosMcChinaDB.edmx">
+    <EntityDeploy Include="McChinaBD.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>PedidosMcChinaDB.Designer.cs</LastGenOutput>
+      <LastGenOutput>McChinaBD.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="PedidosMcChinaDB.edmx.diagram">
-      <DependentUpon>PedidosMcChinaDB.edmx</DependentUpon>
+    <None Include="McChinaBD.edmx.diagram">
+      <DependentUpon>McChinaBD.edmx</DependentUpon>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="PedidosMcChinaDB.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>PedidosMcChinaDB.Context.cs</LastGenOutput>
-      <DependentUpon>PedidosMcChinaDB.edmx</DependentUpon>
-    </Content>
-    <Content Include="PedidosMcChinaDB.edmx.sql" />
-    <Content Include="PedidosMcChinaDB.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>PedidosMcChinaDB.cs</LastGenOutput>
-      <DependentUpon>PedidosMcChinaDB.edmx</DependentUpon>
-    </Content>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="McChinaBD.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>McChinaBD.edmx</DependentUpon>
+      <LastGenOutput>McChinaBD.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="McChinaBD.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>McChinaBD.edmx</DependentUpon>
+      <LastGenOutput>McChinaBD.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

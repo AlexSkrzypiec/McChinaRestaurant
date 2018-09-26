@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClassLibrary1
+namespace Modelos
 {
     using System;
     using System.Collections.Generic;
@@ -20,9 +20,9 @@ namespace ClassLibrary1
             this.Pedidos = new HashSet<Pedidos>();
         }
     
-        public int IdUsuario { get; set; }
-        public string login { get; set; }
-        public string senha { get; set; }
+        public int idUsuario { get; set; }
+        public string Usuario { get; set; }
+        public string Senha { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pedidos> Pedidos { get; set; }

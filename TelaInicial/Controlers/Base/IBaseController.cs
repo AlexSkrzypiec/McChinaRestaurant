@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassLibrary1
+namespace Controllers
 {
-    public class Class1
+    interface IBaseController<T> where T : class
     {
+        void Adicionar(T P);
+      
     }
 }

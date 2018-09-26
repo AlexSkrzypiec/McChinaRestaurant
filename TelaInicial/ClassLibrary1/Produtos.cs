@@ -7,18 +7,25 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClassLibrary1
+namespace Modelos
 {
     using System;
     using System.Collections.Generic;
     
     public partial class Produtos
     {
-        public int IdProduto { get; set; }
-        public string nomeproduto { get; set; }
-        public double valorproduto { get; set; }
-        public int PedidosIdPedido { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Produtos()
+        {
+            this.Pedidos = new HashSet<Pedidos>();
+        }
     
-        public virtual Pedidos Pedidos { get; set; }
+        public int idProduto { get; set; }
+        public string NomeProduto { get; set; }
+        public double ValorProduto { get; set; }
+        public Nullable<int> idPedido { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Pedidos> Pedidos { get; set; }
     }
 }

@@ -19,7 +19,9 @@ namespace ViewWPF.Views
     /// </summary>
     public partial class Janela_1 : Window
     {
-        public Janela_1()
+        string pedido = "";
+
+        public Janela_1()   
         {
             InitializeComponent();
         }
@@ -32,10 +34,37 @@ namespace ViewWPF.Views
                         this.deser1.IsChecked = this.deser2.IsChecked = this.deser3.IsChecked = this.deser4.IsChecked = this.deser5.IsChecked =
                             this.food1.IsChecked = this.food2.IsChecked = this.food3.IsChecked = this.food4.IsChecked = this.food5.IsChecked = false;
 
+            QuantHam1.Clear();
+            QuantHam2.Clear();
+            QuantHam3.Clear();
+            QuantHam4.Clear();
+            QuantHam5.Clear();
+            QuantFrie1.Clear();
+            QuantFrie2.Clear();
+            QuantFrie3.Clear();
+            QuantFrie4.Clear();
+            QuantFrie5.Clear();
+            QuantDrin1.Clear();
+            QuantDrin2.Clear();
+            QuantDrin3.Clear();
+            QuantDrin4.Clear();
+            QuantDrin5.Clear();
+            QuantDeser1.Clear();
+            QuantDeser2.Clear();
+            QuantDeser3.Clear();
+            QuantDeser4.Clear();
+            QuantDeser5.Clear();
+            QuantFood1.Clear();
+            QuantFood2.Clear();
+            QuantFood3.Clear();
+            QuantFood4.Clear();
+            QuantFood5.Clear();
+
             NomeCampo.Clear();
             DataCampo.Clear();
             TipoPedido.SelectedIndex = -1;
-            
+
+
         }
 
         private void SairButton_Click(object sender, RoutedEventArgs e)
@@ -44,5 +73,19 @@ namespace ViewWPF.Views
             this.Close();
 
         }
+
+        private void Ham1_Checked(object sender, RoutedEventArgs e)
+        {
+            pedido = Ham1.ToString();
+        }
+
+        private void Ham2_Checked(object sender, RoutedEventArgs e)
+        {
+            pedido = Ham2.ToString();
+        }
+
+
+
+
     }
 }

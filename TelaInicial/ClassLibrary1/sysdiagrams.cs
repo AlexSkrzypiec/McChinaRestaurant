@@ -12,16 +12,12 @@ namespace Modelos
     using System;
     using System.Collections.Generic;
     
-    public partial class Pedidos
+    public partial class sysdiagrams
     {
-        public int idPedido { get; set; }
-        public string NomePedido { get; set; }
-        public string DataPedido { get; set; }
-        public string TipoPedido { get; set; }
-        public Nullable<int> idUsuario { get; set; }
-        public Nullable<int> idProduto { get; set; }
-    
-        public virtual Produtos Produtos { get; set; }
-        public virtual Usuarios Usuarios { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

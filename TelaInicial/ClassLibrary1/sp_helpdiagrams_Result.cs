@@ -10,18 +10,13 @@
 namespace Modelos
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Pedidos
+    public partial class sp_helpdiagrams_Result
     {
-        public int idPedido { get; set; }
-        public string NomePedido { get; set; }
-        public string DataPedido { get; set; }
-        public string TipoPedido { get; set; }
-        public Nullable<int> idUsuario { get; set; }
-        public Nullable<int> idProduto { get; set; }
-    
-        public virtual Produtos Produtos { get; set; }
-        public virtual Usuarios Usuarios { get; set; }
+        public string Database { get; set; }
+        public string Name { get; set; }
+        public int ID { get; set; }
+        public string Owner { get; set; }
+        public int OwnerID { get; set; }
     }
 }
