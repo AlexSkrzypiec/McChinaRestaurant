@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modelos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,8 +20,7 @@ namespace ViewWPF.Views
     /// </summary>
     public partial class Janela_1 : Window
     {
-        string pedido = "";
-
+    
         public Janela_1()   
         {
             InitializeComponent();
@@ -74,18 +74,25 @@ namespace ViewWPF.Views
 
         }
 
+        private void FinishButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            Pedidos ped = new Pedidos();
+
+            ped.idProduto = Ham1.Checked ? "1" : "0";
+
+
+
+        }
+
         private void Ham1_Checked(object sender, RoutedEventArgs e)
         {
-            pedido = Ham1.ToString();
+
         }
 
         private void Ham2_Checked(object sender, RoutedEventArgs e)
         {
-            pedido = Ham2.ToString();
+
         }
-
-
-
-
     }
 }

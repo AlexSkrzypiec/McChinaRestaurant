@@ -15,10 +15,10 @@ namespace Modelos
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class McChinaBDEntities : DbContext
+    public partial class McChinaBD : DbContext
     {
-        public McChinaBDEntities()
-            : base("name=McChinaBDEntities")
+        public McChinaBD()
+            : base("name=McChinaBD")
         {
         }
     

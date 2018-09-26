@@ -3,22 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ClassLibrary1;
 using Modelos;
-using Controllers;
 
 namespace Controllers
 {
-    public class UsuarioController : IBaseController<UsuarioController>
+    public class UsuarioController : IBaseController<Usuarios>
     {
-        private Contexto contexto = new Contexto();
+        Contexto contexto = new Contexto();
 
-        public void Adicionar(UsuarioController P)
+  
+        public void Adicionar(Usuarios P)
         {
             contexto.Usuarios.Add(P);
             contexto.SaveChanges();
-
+            throw new NotImplementedException();
         }
-
     }
 }
+    

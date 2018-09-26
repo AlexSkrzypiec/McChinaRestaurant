@@ -1,5 +1,5 @@
-﻿using ClassLibrary1;
-using Controllers;
+﻿using Controllers;
+using Modelos;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -24,6 +24,7 @@ namespace ViewWPF.Views
     {
         public Janela_3()
         {
+            Contexto contexto = new Contexto();
             InitializeComponent();
         }
 
@@ -32,35 +33,19 @@ namespace ViewWPF.Views
             this.Close();
         }
 
+      
         private void RegistrarNovo_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                UsuarioController cont = new UsuarioController();
-                IEnumerable<TextBox> txts = this.gridComponentes.Children.OfType<TextBox>();
 
-                foreach (var textos in txts)
-                {
-                    if (textos.Equals(null))
-                    {
-                        throw new NullReferenceException("Todos os Campos são obrigatorios!");
-                    }
-                }
-                UsuariosModelo usuario = new UsuariosModelo();
+            Usuarios usuario = new Usuarios();
 
-                usuario.Usuario = RegistrarLogin.Text;
-                usuario.Senha = senha.Password;
+            usuario.Usuario = RegistrarLogin.Text;
+            usuario.Senha = senha.Password;
 
-                cont.Adicionar(usuario);
+            UsuarioController UsuarioController = new UsuarioController();
 
-                MessageBox.Show("Usuário salvo com sucesso");
+            UsuarioController.Adicionar(usuario);
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao salvar (" + ex.Message + ")");
-            }
-            this.Close();
         }
     }
 }

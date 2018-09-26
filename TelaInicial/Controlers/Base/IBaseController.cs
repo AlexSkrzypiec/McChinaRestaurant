@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 
 namespace Controllers
 {
-    interface IBaseController<T> where T : class
-    {
-        void Adicionar(T P);
-      
-    }
+        public interface IBaseController<T> where T : class
+        {
+            void Adicionar(T P);
+
+
+        }
+
+
 }
+

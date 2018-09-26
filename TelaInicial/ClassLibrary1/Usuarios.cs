@@ -11,7 +11,8 @@ namespace Modelos
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Usuarios
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,7 +20,7 @@ namespace Modelos
         {
             this.Pedidos = new HashSet<Pedidos>();
         }
-    
+        [Key]
         public int idUsuario { get; set; }
         public string Usuario { get; set; }
         public string Senha { get; set; }

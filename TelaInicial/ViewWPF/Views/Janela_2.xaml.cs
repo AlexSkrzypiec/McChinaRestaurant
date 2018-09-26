@@ -34,7 +34,7 @@ namespace ViewWPF.Views
         private void entrar_Click(object sender, RoutedEventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-B9FOF0O;Initial Catalog=McChinaBD;Integrated Security=True");   
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM Usuarios WHERE Usuario='" + login.Text + "' AND Senha='" + senha.Password + "'", con);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM Usuarios WHERE Usuario='" + login.Text + "' AND Senha='" + senhalogin.Password + "'", con);
             
             DataTable dt = new DataTable();   
             sda.Fill(dt);

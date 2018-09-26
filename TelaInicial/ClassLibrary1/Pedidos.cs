@@ -11,9 +11,11 @@ namespace Modelos
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Pedidos
     {
+        [Key]    
         public int idPedido { get; set; }
         public string NomePedido { get; set; }
         public string DataPedido { get; set; }

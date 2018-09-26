@@ -64,52 +64,49 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="McChinaBD.Context.cs">
+    <Compile Include="McChinaDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>McChinaBD.Context.tt</DependentUpon>
+      <DependentUpon>McChinaDB.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="McChinaBD.cs">
+    <Compile Include="McChinaDB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>McChinaBD.tt</DependentUpon>
+      <DependentUpon>McChinaDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="McChinaBD.Designer.cs">
+    <Compile Include="McChinaDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>McChinaBD.edmx</DependentUpon>
+      <DependentUpon>McChinaDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="Pedidos.cs">
-      <DependentUpon>McChinaBD.tt</DependentUpon>
+      <DependentUpon>McChinaDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="PedidosModelo.cs" />
     <Compile Include="Produtos.cs">
-      <DependentUpon>McChinaBD.tt</DependentUpon>
+      <DependentUpon>McChinaDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="ProdutosModelo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>McChinaBD.tt</DependentUpon>
+      <DependentUpon>McChinaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="sp_helpdiagrams_Result.cs">
-      <DependentUpon>McChinaBD.tt</DependentUpon>
+      <DependentUpon>McChinaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="sysdiagrams.cs">
-      <DependentUpon>McChinaBD.tt</DependentUpon>
+      <DependentUpon>McChinaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Usuarios.cs">
-      <DependentUpon>McChinaBD.tt</DependentUpon>
+      <DependentUpon>McChinaDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="UsuariosModelo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="McChinaBD.edmx">
+    <EntityDeploy Include="McChinaDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>McChinaBD.Designer.cs</LastGenOutput>
+      <LastGenOutput>McChinaDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="McChinaBD.edmx.diagram">
-      <DependentUpon>McChinaBD.edmx</DependentUpon>
+    <None Include="McChinaDB.edmx.diagram">
+      <DependentUpon>McChinaDB.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
@@ -129,15 +126,15 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="McChinaBD.Context.tt">
+    <Content Include="McChinaDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>McChinaBD.edmx</DependentUpon>
-      <LastGenOutput>McChinaBD.Context.cs</LastGenOutput>
+      <DependentUpon>McChinaDB.edmx</DependentUpon>
+      <LastGenOutput>McChinaDB.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="McChinaBD.tt">
+    <Content Include="McChinaDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>McChinaBD.edmx</DependentUpon>
-      <LastGenOutput>McChinaBD.cs</LastGenOutput>
+      <DependentUpon>McChinaDB.edmx</DependentUpon>
+      <LastGenOutput>McChinaDB.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

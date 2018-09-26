@@ -183,7 +183,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="McChinaBDEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="McChinaBD" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Pedidos" EntityType="Self.Pedidos" />
           <EntitySet Name="Produtos" EntityType="Self.Produtos" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
@@ -243,7 +243,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="McChinaBDModelStoreContainer" CdmEntityContainer="McChinaBDEntities">
+        <EntityContainerMapping StorageEntityContainer="McChinaBDModelStoreContainer" CdmEntityContainer="McChinaBD">
           <EntitySetMapping Name="Pedidos">
             <EntityTypeMapping TypeName="McChinaBDModel.Pedidos">
               <MappingFragment StoreEntitySet="Pedidos">

@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "McChina", "McChina\McChina.csproj", "{B91DAF2C-597E-4E66-B83F-20B84FCBB3C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controllers", "Controllers\Controllers.csproj", "{B56AD076-9A59-46B3-A1EF-080F36A52B37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelos", "Modelos\Modelos.csproj", "{4EAF04B6-9C8C-4484-9250-6490B17F7CFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B91DAF2C-597E-4E66-B83F-20B84FCBB3C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B91DAF2C-597E-4E66-B83F-20B84FCBB3C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B91DAF2C-597E-4E66-B83F-20B84FCBB3C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B91DAF2C-597E-4E66-B83F-20B84FCBB3C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B56AD076-9A59-46B3-A1EF-080F36A52B37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B56AD076-9A59-46B3-A1EF-080F36A52B37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B56AD076-9A59-46B3-A1EF-080F36A52B37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B56AD076-9A59-46B3-A1EF-080F36A52B37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EAF04B6-9C8C-4484-9250-6490B17F7CFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EAF04B6-9C8C-4484-9250-6490B17F7CFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EAF04B6-9C8C-4484-9250-6490B17F7CFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EAF04B6-9C8C-4484-9250-6490B17F7CFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C2F928DF-9736-4780-B122-C7869077C637}
+	EndGlobalSection
+EndGlobal
