@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B91DAF2C-597E-4E66-B83F-20B84FCBB3C7}</ProjectGuid>
+    <ProjectGuid>{5E528A85-4CC8-482D-B68A-D612E15680FF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>McChina</RootNamespace>
-    <AssemblyName>McChina</AssemblyName>
+    <RootNamespace>Views</RootNamespace>
+    <AssemblyName>Views</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -61,16 +61,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Views\Pedido.xaml.cs">
-      <DependentUpon>Pedido.xaml</DependentUpon>
+    <Compile Include="ViewsWPF\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Registro.xaml.cs">
+    <Compile Include="ViewsWPF\Pedidos.xaml.cs">
+      <DependentUpon>Pedidos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewsWPF\Registro.xaml.cs">
       <DependentUpon>Registro.xaml</DependentUpon>
     </Compile>
-    <Page Include="Views\Login.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -79,18 +78,19 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Views\Login.xaml.cs">
-      <DependentUpon>Login.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\Pedido.xaml">
+    <Page Include="ViewsWPF\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Registro.xaml">
+    <Page Include="ViewsWPF\Pedidos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewsWPF\Registro.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -127,12 +127,12 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Controllers\Controllers.csproj">
-      <Project>{B56AD076-9A59-46B3-A1EF-080F36A52B37}</Project>
+      <Project>{F0CBE539-9758-49EE-AD01-5990DABD6947}</Project>
       <Name>Controllers</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Modelos\Modelos.csproj">
-      <Project>{4EAF04B6-9C8C-4484-9250-6490B17F7CFE}</Project>
-      <Name>Modelos</Name>
+    <ProjectReference Include="..\Modelo\Modelo.csproj">
+      <Project>{0336B426-1BF1-4ED6-A17D-48A828295042}</Project>
+      <Name>Modelo</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

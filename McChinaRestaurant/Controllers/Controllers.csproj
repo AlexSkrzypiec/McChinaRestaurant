@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B56AD076-9A59-46B3-A1EF-080F36A52B37}</ProjectGuid>
+    <ProjectGuid>{F0CBE539-9758-49EE-AD01-5990DABD6947}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Controllers</RootNamespace>
@@ -49,19 +49,19 @@
   <ItemGroup>
     <Compile Include="Base\IBaseController.cs" />
     <Compile Include="DAL\Contexto.cs" />
+    <Compile Include="PedidoController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioController.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Modelo\Modelo.csproj">
+      <Project>{0336B426-1BF1-4ED6-A17D-48A828295042}</Project>
+      <Name>Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <ProjectReference Include="..\Modelos\Modelos.csproj">
-      <Project>{4EAF04B6-9C8C-4484-9250-6490B17F7CFE}</Project>
-      <Name>Modelos</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

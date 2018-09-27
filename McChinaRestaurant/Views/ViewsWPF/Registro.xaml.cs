@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Controllers;
+using Modelo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace McChina
+namespace Views.ViewsWPF
 {
     /// <summary>
     /// Lógica interna para Registro.xaml
@@ -22,6 +24,25 @@ namespace McChina
         public Registro()
         {
             InitializeComponent();
+        }
+        private void RegistrarNovo_Click(object sender, RoutedEventArgs e)
+        {
+
+            Usuario usuario = new Usuario
+            {
+                Login = RegistrarLogin.Text,
+                Senha = senha.Password
+            };
+
+            UsuarioController user = new UsuarioController();
+
+            user.Adicionar(usuario);
+
+        }
+
+        private void cancela_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
